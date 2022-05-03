@@ -7,50 +7,50 @@ A React app with a Rails API backend
     |X| Came up with Idea: a mock website for a clinic where users can schedule visits with a provider, and can see details of their visits on their profile.
 
   Goals: 
-    | | establish models & relationships (User, Provider, Visit)
-    | | build out our Rails API back end, at least start
-    | | add serializers
+    |O| establish models & relationships (User, Provider, Visit)
+    |O| build out our Rails API back end, at least start
+    |O| add serializers
 
 2022-05-04
   Goals:
-    | | create-react-app
-    | | hooks or Redux, need to decide
-    | | 
+    |O| create-react-app
+    |O| hooks or Redux, need to decide
+    |O| 
 
 2022-05-05
   Goals:
-    | | User sign in functionality using sessions
-    | | User sign out 
-    | |
+    |O| User sign in functionality using sessions
+    |O| User sign out 
+    |O|
 
 2022-05-06
   Goals:
-    | | User sign up functionality 
-    | | React Router
-    | | 
+    |O| User sign up functionality 
+    |O| React Router
+    |O| 
 
 2022-05-07
   Goals:
-    | |
-    | |
-    | |
+    |O|
+    |O|
+    |O|
 
 2022-05-08
   Goals:
-    | |
-    | |
-    | |
+    |O|
+    |O|
+    |O|
 
 2022-05-09
   Goals:
-    | |
-    | |
-    | |
+    |O|
+    |O|
+    |O|
 
 2022-05-10
   Goals:
-    | |
-    | |
-    | |
+    |O|
+    |O|
+    |O|
 
 
