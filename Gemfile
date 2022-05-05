@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+gem 'rubygems-update', '~> 1.3', '>= 1.3.5'
 ruby "2.7.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

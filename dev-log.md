@@ -13,8 +13,8 @@ A React app with a Rails API backend
 
 2022-05-04
   Goals:
-    |O| create-react-app
-    |O| hooks or Redux, need to decide
+    |X| create-react-app
+    |X| hooks or Redux, need to decide
     |X| created seed file
 
 2022-05-05
