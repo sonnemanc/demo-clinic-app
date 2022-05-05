@@ -21,7 +21,7 @@ A React app with a Rails API backend
   Goals:
     |O| User sign in functionality using sessions
     |O| User sign out 
-    |O|
+    |O| Authentication
 
 2022-05-06
   Goals:
@@ -31,7 +31,7 @@ A React app with a Rails API backend
 
 2022-05-07
   Goals:
-    |O|
+    |O| 
     |O|
     |O|
 
