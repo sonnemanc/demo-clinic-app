@@ -26,8 +26,8 @@ A React app with a Rails API backend
 2022-05-06
   Goals:
     |O| User sign up functionality 
-    |O| React Router
-    |O| 
+    |X| React Router
+    |X| Components initial setup/imports and exports
 
 2022-05-07
   Goals:

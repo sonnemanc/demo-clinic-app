@@ -4,7 +4,7 @@ import './App.css';
 import Home from "./Components/Home"
 import About from "./Components/About"
 import Schedule from "./Components/Schedule"
-import UserPage from "./Components/User"
+import UserPage from "./Components/UserPage"
 
 
 function App() {
