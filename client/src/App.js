@@ -5,9 +5,32 @@ import Home from "./Components/Home"
 import About from "./Components/About"
 import Schedule from "./Components/Schedule"
 import UserPage from "./Components/UserPage"
+import { useEffect, useState } from 'react'
 
 // I assume we will do our fetches for doctor/patient/and appointment data here and pass the data in state to our elements below. If we do, we will need useState and useEffect hooks here as well as anywhere we update state/do CRUD actions
 function App() {
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/v1/users')
+    .then(r => r.json())
+    .then(visitData => console.log(visitData))
+  }, []);
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  const [user, setUser] = useState([])
+
+
+
+  const [visit, setVisit] = useState([])
+
+
   return (
     <div >
       <Routes>
