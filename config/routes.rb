@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  resources :visits
-  resources :providers
-  resources :users
+
+
+  namespace :api do
+    namespace :v1 do
+      resources :visits
+      resources :providers
+      resources :users
+    end
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
