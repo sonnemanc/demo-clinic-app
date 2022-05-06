@@ -10,7 +10,7 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
-
+       render json: User.create(user_params)
     end
 
     def update
@@ -28,6 +28,7 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def user_params
+        params.permit(:email, :lastname, :firstname, :username, :password)
 
     end
 

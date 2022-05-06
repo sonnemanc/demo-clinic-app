@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import * as React from "react";
 import './App.css';
 import Home from "./Components/Home"
+import Authentication from "./Components/Authentication"
 import About from "./Components/About"
 import Schedule from "./Components/Schedule"
 import UserPage from "./Components/UserPage"
@@ -54,16 +55,21 @@ function App() {
 
   return (
     <div >
-       {user ? `Welcome, ${user.attributes.first_name}` : ``}
+      
+       {/* {user ? `Welcome, ${user.attributes.first_name}` : ``} */}
                   {user ? <Logout/> : <Login  handleLogin={handleLogin}/>} 
-      <button> Sign Up </button>
+                  {!user ? <Authentication/> : <login/> }
+      <button> <Link to= './signup' > Click to sign up</Link> </button>
+      <Navigation/> 
+      <Login/>
       <Routes>
-        if user <Navigation/>
+       
        {/* <Link to="/invoices">Invoices</Link> |{" "} */}
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About/>} />
         <Route path="schedule" element={<Schedule/>} />
         <Route path="user_page" element={<UserPage />} />
+        <Route path="signup" element={<Authentication  user={user} setUser={setUser} />} />
       </Routes>
     </div>
   );
