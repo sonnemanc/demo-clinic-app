@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/api/v1/get_current_user", to: "api/v1/sessions#get_current_user"
   delete "/api/v1/logout", to: "api/v1/sessions#destroy"
   get '/me', to: "users#show"
-# can i push from my branch?
+# can i push from my branch?   Yes you can! :)
 
   namespace :api do
     namespace :v1 do
