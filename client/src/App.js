@@ -58,7 +58,7 @@ function App() {
       
        {/* {user ? `Welcome, ${user.attributes.first_name}` : ``} */}
                   {user ? <Logout/> : <Login  handleLogin={handleLogin}/>} 
-                  {!user ? <Authentication/> : <login/> }
+                  {!user ? <Authentication user={user} setUser={setUser}/> : <login/> }
       <button> <Link to= './signup' > Click to sign up</Link> </button>
       <Navigation/> 
       <Login/>

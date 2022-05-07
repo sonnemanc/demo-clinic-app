@@ -5,11 +5,11 @@ import {  useState } from 'react'
 // Route HOME
 // no password confirmation (div appears when login fails or its a class that gets flagged)
 function Authentication({user, setUser}) {
-  const [username, setUsername] = useState('')
+    const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [firstname, setFirstname] = useState("")
-    const [lastname, setLastname] = useState("")
+    const [first_name, setFirstname] = useState("")
+    const [last_name, setLastname] = useState("")
     const handleUsername = (e) => setUsername(e.target.value)
     const handleEmail = (e) => setEmail(e.target.value)
     const handlePassword = (e) => setPassword(e.target.value)
@@ -20,10 +20,10 @@ function Authentication({user, setUser}) {
     const handleSubmit = (e) => {
       e.preventDefault();
     
-      const newUser = { username, email, password}
+      const newUser = { username, email, password, first_name, last_name}
       if (newUser.username !== "") {
           if (newUser.password.length >= 5 && newUser.password.length <= 10) {
-          fetch(`/signup`, {
+          fetch(`localhost:3000/api/v1/users`, {
               method: "POST",
               headers: {
               "Content-Type": "application/json",
@@ -68,12 +68,12 @@ function Authentication({user, setUser}) {
         <label>
          first name
     
-        <input type="text" value={firstname} onChange={(e) => handleFirstname(e)} />
+        <input type="text" value={first_name} onChange={(e) => handleFirstname(e)} />
         </label>
         <label>
          last name
     
-        <input type="text" value={lastname} onChange={(e) => handleLastname(e)} />
+        <input type="text" value={last_name} onChange={(e) => handleLastname(e)} />
         </label>
        
         <input type="submit" value="Sign up!" />
