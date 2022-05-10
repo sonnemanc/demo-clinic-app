@@ -12,7 +12,7 @@ export default function Login({handleLogin}) {
           password
       }
       console.log("user", user)
-        fetch(`/login`,{
+        fetch('/login',{
           method:'POST',
           headers:{'Content-Type': 'application/json'},
           body:JSON.stringify(user)
@@ -22,6 +22,7 @@ export default function Login({handleLogin}) {
               r.json().then((user) => handleLogin(user));
              
             }
+            
           });
         }
             

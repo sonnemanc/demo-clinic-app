@@ -23,7 +23,7 @@ function Authentication({user, setUser}) {
       const newUser = { username, email, password, first_name, last_name}
       if (newUser.username !== "") {
           if (newUser.password.length >= 5 && newUser.password.length <= 10) {
-          fetch(`localhost:3000/api/v1/users`, {
+          fetch(`/api/v1/users`, {
               method: "POST",
               headers: {
               "Content-Type": "application/json",
@@ -32,9 +32,7 @@ function Authentication({user, setUser}) {
                   }).then((r) => r.json());
                   console.log(newUser)
                   setUser(user)
-              
-                  console.log(user)
-                  nav("/");
+                  // nav("/");
                 }
               } else {
                   alert(
