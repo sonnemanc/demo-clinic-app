@@ -9,7 +9,7 @@ A React app with a Rails API backend
   Goals: 
     |X| establish models & relationships (User, Provider, Visit)
     |X| build out our Rails API back end, at least start
-    |O| add serializers
+    |X| add serializers
 
 2022-05-04
   Goals:
@@ -31,26 +31,9 @@ A React app with a Rails API backend
 
 2022-05-07
   Goals:
-    |O| 
-    |O|
-    |O|
+    |X| Logo created
 
-2022-05-08
+2022-05-07
   Goals:
+    |O| User login functionality
     |O|
-    |O|
-    |O|
-
-2022-05-09
-  Goals:
-    |O|
-    |O|
-    |O|
-
-2022-05-10
-  Goals:
-    |O|
-    |O|
-    |O|
-
-

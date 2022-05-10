@@ -49,4 +49,4 @@ end
 gem 'active_model_serializers', '~> 0.10.12'
 
 
-# gem "pg", "~> 1.3"
+#gem "pg", "~> 1.3"
