@@ -4,7 +4,8 @@ class Api::V1::SessionsController < ApplicationController
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
-            render json: UserSerializer.new(@user), status: :ok
+            #render json: UserSerializer.new(@user), status: :ok
+            render json: @user
         else
             render json: {
                 error: "Invalid Username or Password"
