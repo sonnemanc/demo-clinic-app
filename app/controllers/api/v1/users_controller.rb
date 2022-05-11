@@ -1,12 +1,12 @@
 class Api::V1::UsersController < ApplicationController
     before_action :set_user, only: [:show, :update, :destroy]
 
-    def index
-        render json: User.all
-    end
+    #def index
+    #    render json: User.all
+    #end
 
     def show
-        render json: @user
+        render json: UserSerializer.new(@user)
     end
 
     def create
@@ -17,6 +17,7 @@ class Api::V1::UsersController < ApplicationController
       else
         render json: @user.errors, status: :unprocessable_entity
       end
+      
     end
 
     def update

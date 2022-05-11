@@ -1,5 +1,6 @@
 class VisitSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :provider_id
-  belongs_to :author
+  include FastJsonapi::ObjectSerializer
+  attributes :id, :user_id, :provider_id, :purpose
+  belongs_to :provider
   belongs_to :user
 end

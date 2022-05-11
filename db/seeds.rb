@@ -10,6 +10,6 @@ User.delete_all
 Provider.delete_all
 Visit.delete_all
 
-User.create(first_name: 'John', last_name: 'Smith', username: 'BestDev', password: 'guest')
+User.create(first_name: 'John', last_name: 'Smith', username: 'BestDev', password: 'guest', email: 'dev@test.com')
 Provider.create(first_name: 'Antony', last_name: 'Todd', title: 'Dr.')
-Visit.create(user_id: 1, provider_id: 1)
+Visit.create(user_id: 1, provider_id: 1, purpose: 'Annual Exam')

@@ -12,18 +12,20 @@ export default function Login({handleLogin}) {
           password
       }
       console.log("user", user)
-        fetch('http://localhost:3000/api/v1/login',{
+        fetch('http://localhost:3000/api/v1/login', {
+          credentials: 'include',
           method:'POST',
           headers:{'Content-Type': 'application/json'},
           body:JSON.stringify(user)
         })
           .then((r) => {
+            console.log(r)
             if (r.ok) {
               r.json().then((user) => handleLogin(user));
-             
             }
             
-          });
+          })
+          .catch(console.log)
         }
             
   return (

@@ -15,14 +15,14 @@ import Navigation from "./Components/Navigation";
 // I assume we will do our fetches for doctor/patient/and appointment data here and pass the data in state to our elements below. If we do, we will need useState and useEffect hooks here as well as anywhere we update state/do CRUD actions
 function App() {
 
-  useEffect(() => {
-    fetch('http://localhost:3000/api/v1/users')
-    .then(r => r.json())
-    .then(visitData => console.log(visitData))
-  }, []);
+  //useEffect(() => {
+  //  fetch('http://localhost:3000/api/v1/get_current_user')
+  //  .then(r => r.json())
+  //  .then(visitData => console.log(visitData))
+  //}, []);
 
   useEffect(() => {
-    fetch("/me").then((response) => {
+    fetch("/api/v1/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }
@@ -35,6 +35,9 @@ function App() {
 
   function handleLogin(user) {
     setUser(user);
+    //adding setVisit here 
+    //setVisit(user.visits)
+    
     // nav("/")
   }
 
@@ -63,7 +66,7 @@ function App() {
       <Routes>
        
        {/* <Link to="/invoices">Invoices</Link> |{" "} */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home user={user}/>} />
         <Route path="about" element={<About/>} />
         <Route path="schedule" element={<Schedule/>} />
         <Route path="user_page" element={<UserPage />} />
