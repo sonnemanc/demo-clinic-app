@@ -34,7 +34,10 @@ function App() {
   const nav = useNavigate()
 
   function handleLogin(user) {
+    console.log(user)
+
     setUser(user);
+
     // nav("/")
   }
 
@@ -54,7 +57,7 @@ function App() {
   return (
     <div >
       
-       {user ? `Welcome, ${user.attributes.first_name}` : ``}
+       {user ? `Welcome, ${user.first_name}` : ``}
                   {user ? <Logout/> : <Login  handleLogin={handleLogin}/>} 
                   {!user ? <Authentication user={user} setUser={setUser}/> : <login/> }
       <button> <Link to= './signup' > Click to sign up</Link> </button>
